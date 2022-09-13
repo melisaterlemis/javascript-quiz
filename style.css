@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    font-family: Gotham Rounded;
+    
+}
+
+:root{
+    --hue-neutral: rgb(194, 134, 134);
+    --hue-wrong: red;
+    --hue-correct: green;
+}
+
+body{
+    --hue:var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(131, 203, 241);   
+
+    
+}
+
+body.correct{
+   --hue:var(--hue-correct);
+}
+body.wrong{
+    --hue:var(--hue-wrong);
+
+}
+.container{
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 10px 2px;
+}
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap: 10px;
+    margin: 5px 0;
+}
+.btn{
+    background-color: var(--hue-neutral);
+    border: 1px solid var(--hue-neutral);
+    border-radius: 50px;
+    padding: 20px 10px;
+    color: #fff;
+    font-weight: bold;
+    outline: none;  
+
+}
+.btn:hover{
+    border-color: black;
+}
+.btn.correct{
+    --hue:--hue-correct;
+    color:black;
+}
+
+.btn.wrong{
+    --hue:--hue-wrong;
+}
+#start-btn,#next-btn{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 7px 25px;
+    margin: 0 10px;
+
+
+}
+.control{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.hide{
+    display: none;
+    
+}
+
